@@ -1,1 +1,60 @@
-<p>side-nav works!</p>
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" opened="true">
+
+    <div class="upperSideNav">
+        <h1>Sistema Hotel</h1>
+
+        <button mat-button routerLink="">Home</button>
+    </div>
+
+    <div class="bodySideNav">
+
+      <div class="button-container">
+        <button mat-flat-button routerLink="/dashboard" >
+          <mat-icon> dashboard </mat-icon>
+          Dashboard
+        </button>
+      </div>
+
+      <div class="button-container">
+        <button mat-stroked-button [matMenuTriggerFor]="belowMenu">
+          <mat-icon> meeting_room </mat-icon>
+          Quartos
+        </button>
+
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+          <button mat-menu-item>Quarto Simples</button>
+          <button mat-menu-item>Quarto de luxo</button>
+          <button mat-menu-item>Suíte</button>
+        </mat-menu>
+      </div>
+
+      <div class="button-container">
+        <button mat-stroked-button>
+          <mat-icon> person </mat-icon>
+          Usuários
+        </button>
+      </div>
+
+    </div>
+
+    <div class="lowerSideNav">
+
+      <div class="button-container">
+        <button mat-raised-button>
+          <mat-icon> info </mat-icon>
+          Dúvidas?
+        </button>
+      </div>
+
+    </div>
+
+  </mat-drawer>
+
+  <div class="sidenav-content" [class.mat-drawer-hidden]="!isDrawerOpen">
+    <button type="button" mat-button (click)="drawer.toggle()" >
+      <mat-icon id="icon-menu">menu</mat-icon>
+    </button>
+  </div>
+
+</mat-drawer-container>

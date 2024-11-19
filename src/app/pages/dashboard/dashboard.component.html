@@ -1,0 +1,36 @@
+<article>
+  <div>
+    <h1>Vão ter diversas coisas no dashboard! </h1>
+  </div>
+
+  <section class="cardContainer">
+    <div id="card-1">
+      <h4> Quartos ocupados </h4>
+      <p> 207/260 </p>
+    </div>
+    <div id="card-2">
+      <h4> Lucro no mês </h4>
+      <p> R$18.456 </p>
+    </div>
+    <div id="card-3">
+      <h4> Quartos Reservados </h4>
+      <p> 34/260 </p>
+    </div>
+    <div id="card-4">
+      <h4> A pagar </h4>
+      <p> R$2.544 </p>
+    </div>
+
+
+  </section>
+
+
+  <mat-grid-list cols="4" rowHeight="100px">
+    @for (tile of tiles; track tile) {
+      <mat-grid-tile
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">{{tile.text}}</mat-grid-tile>
+    }
+  </mat-grid-list>
+</article>
