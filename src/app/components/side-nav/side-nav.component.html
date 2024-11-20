@@ -1,5 +1,10 @@
+<mat-drawer-container class="containerBack" autosize>
+  <mat-drawer #drawerRelative class="sidenav2" mode="side" opened="true">
+  </mat-drawer>
+</mat-drawer-container>
+
 <mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer class="sidenav" mode="side" opened="true">
+  <mat-drawer #drawerFixed class="sidenav" mode="side" opened="true">
 
     <div class="upperSideNav">
         <h1>Sistema Hotel</h1>
@@ -11,14 +16,14 @@
 
       <div class="button-container">
         <button mat-flat-button routerLink="/dashboard" >
-          <mat-icon> dashboard </mat-icon>
+          <mat-icon [inline]="true"> dashboard </mat-icon>
           Dashboard
         </button>
       </div>
 
       <div class="button-container">
         <button mat-stroked-button [matMenuTriggerFor]="belowMenu">
-          <mat-icon> meeting_room </mat-icon>
+          <mat-icon [inline]="true"> meeting_room </mat-icon>
           Quartos
         </button>
 
@@ -31,8 +36,22 @@
 
       <div class="button-container">
         <button mat-stroked-button>
-          <mat-icon> person </mat-icon>
+          <mat-icon [inline]="true"> person </mat-icon>
           Usuários
+        </button>
+      </div>
+
+      <div class="button-container">
+        <button mat-stroked-button>
+          <mat-icon [inline]="true"> history </mat-icon>
+          Histórico
+        </button>
+      </div>
+
+      <div class="button-container">
+        <button mat-stroked-button>
+          <mat-icon [inline]="true"> payments </mat-icon>
+          Pagamentos
         </button>
       </div>
 
@@ -42,7 +61,7 @@
 
       <div class="button-container">
         <button mat-raised-button>
-          <mat-icon> info </mat-icon>
+          <mat-icon [inline]="true"> info </mat-icon>
           Dúvidas?
         </button>
       </div>
@@ -52,9 +71,15 @@
   </mat-drawer>
 
   <div class="sidenav-content" [class.mat-drawer-hidden]="!isDrawerOpen">
-    <button type="button" mat-button (click)="drawer.toggle()" >
-      <mat-icon id="icon-menu">menu</mat-icon>
+    <button type="button" mat-button (click)="drawerFixed.toggle(); drawerRelative.toggle(); postData();">
+      <mat-icon id="icon-menu" [inline]="true">menu</mat-icon>
     </button>
   </div>
 
 </mat-drawer-container>
+
+
+
+
+
+

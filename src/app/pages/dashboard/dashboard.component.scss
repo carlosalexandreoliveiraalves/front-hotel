@@ -1,10 +1,17 @@
-@import "../../../cores-principais";
+@import "../../cores-principais.scss";
+@import "../../mixins-pricipais.scss";
 
 article {
+  @include screen-filler();
   margin-top: 7vw;
-  width: 100%;
-}
+  width: 150%;
 
+  .title {
+    h1 {
+      @include main-title-size();
+    }
+  }
+}
 
 .cardContainer {
   height: auto;
@@ -33,7 +40,7 @@ article {
       margin-top: 1vw;
       color: white;
       font-size: 2.5vw;
-      font-weight: 600;
+      font-weight: 550;
     }
   }
 

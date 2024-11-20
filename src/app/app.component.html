@@ -1,8 +1,14 @@
 <app-header> </app-header>
 
 <div class="body">
-  <app-side-nav> </app-side-nav>
+  <div class="sideNav" [ngClass]="{ 'drawer-open': isDrawerOpen, 'drawer-closed': !isDrawerOpen }">
+    <app-side-nav (updatedDrawer)="onDrawerUpdate($event)"> </app-side-nav>
+  </div>
 
-  <router-outlet> </router-outlet>
+  <div class="strech">
+    <router-outlet> </router-outlet>
+  </div>
+
 </div>
+
 

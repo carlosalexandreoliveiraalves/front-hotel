@@ -1,0 +1,15 @@
+// app-side-nav {
+//   flex-shrink: 0; /* Evita que o side-bar encolha */
+// }
+
+@mixin screen-filler {
+  flex-grow: 2; /* Faz o conteúdo ocupar o espaço restante */
+  height: auto;
+  min-width: 100%;
+  max-width: fit-content;
+  overflow: auto; /* Garante que o conteúdo seja rolável se necessário */
+}
+
+@mixin main-title-size() {
+  font-size: 4vw;
+}

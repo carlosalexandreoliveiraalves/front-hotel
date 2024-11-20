@@ -1,3 +1,9 @@
+.containerBack {
+  width: auto;
+  background: none;
+  padding-right: 0.7vw;
+}
+
 .container {
   width: auto;
   height: 100%;
@@ -5,7 +11,7 @@
   flex-direction: row !important;
   background: none;
   padding-right: 0.7vw;
-  position: relative;
+  position: fixed;
 }
 
 .sidenav-content {
@@ -28,7 +34,7 @@
       align-items: center;
       justify-content: center;
       margin: 0;
-      font-size: 30px;
+      font-size: 2.5vw;
     }
   }
 
@@ -36,7 +42,7 @@
 }
 
 .sidenav {
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   background-attachment: white;
   border-right: 0;
   width: 18vw;
@@ -51,15 +57,17 @@
     align-items: center;
     border-bottom: 2px solid black;
     padding-bottom: 1vw;
+    padding-top: 1.5vw;
 
     h1 {
-      font-size: 2em;
+      font-size: 2.5vw;
       font-weight: 400;
     }
 
     button {
       width: 80%;
-      font-size: 1em;
+      font-size: 1vw;
+      height: 4vw;
     }
 
   }
@@ -68,18 +76,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
 
     .button-container {
-      width: 80%;
+      width: 15vw;
       margin-top: 1vw;
 
       a, button {
         width: 100%;
-        font-size: 1.2em;
+        font-size: 1.2vw;
         font-weight: 500;
         display: flex;
         flex-direction: row;
         justify-content: left;
+        height: 3vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+
+        mat-icon {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          font-size: 2vw;
+          z-index: 2;
+          width: 2vw;
+        }
       }
     }
   }
@@ -100,7 +124,24 @@
       align-items: center;
 
       button {
-        font-size: 1.5em;
+        font-size: 1.5vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 13vw;
+        height: 3.5vw;
+
+
+        mat-icon {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5vw;
+          z-index: 2;
+          width: 2vw;
+        }
       }
     }
   }

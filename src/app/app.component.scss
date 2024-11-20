@@ -4,4 +4,23 @@
   display: flex;
   flex-direction: row;
 
+  .strech {
+    min-width: 70%;
+    flex-grow: 1;
+    padding-right: 2vw;
+  }
+
 }
+
+.drawer-open {
+  margin-right: -5%;
+  width: 25%;
+  transition: margin-right 0.5s ease, width 0.5s ease;
+}
+
+.drawer-closed {
+  margin-right: 5%;
+  width: 2%;
+  transition: margin-right 0.5s ease, width 0.5s ease;
+}
+

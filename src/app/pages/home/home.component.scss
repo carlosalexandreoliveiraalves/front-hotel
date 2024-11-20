@@ -1,3 +1,13 @@
+@import "../../cores-principais.scss";
+@import "../../mixins-pricipais.scss";
+
 article {
+  @include screen-filler();
   margin-top: 7vw;
+
+  .title {
+    h1 {
+      @include main-title-size();
+    }
+  }
 }
