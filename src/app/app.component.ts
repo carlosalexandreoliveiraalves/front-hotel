@@ -20,7 +20,5 @@ export class AppComponent {
   onDrawerUpdate(status: boolean) {
     this.isDrawerOpen = status;
     console.log('Status do Drawer recebido:', status, this.isDrawerOpen);
-
-
   }
 }
