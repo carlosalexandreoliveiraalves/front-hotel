@@ -27,9 +27,10 @@
           Quartos
         </button>
 
-        <mat-menu #belowMenu="matMenu" yPosition="below">
+        <mat-menu class="mat-menu" #belowMenu="matMenu" yPosition="below">
+          <button mat-menu-item>Todos os Quartos</button>
           <button mat-menu-item>Quarto Simples</button>
-          <button mat-menu-item>Quarto de luxo</button>
+          <button mat-menu-item routerLink="/luxousRoom">Quarto de Luxo</button>
           <button mat-menu-item>Suíte</button>
         </mat-menu>
       </div>
