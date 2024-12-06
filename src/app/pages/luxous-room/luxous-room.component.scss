@@ -1,0 +1,65 @@
+@import "../../cores-principais.scss";
+@import "../../mixins-pricipais.scss";
+
+article {
+  @include screen-filler();
+  margin-top: 7vw;
+  width: 150%;
+
+  .title {
+    h1 {
+      @include main-title-size();
+    }
+  }
+
+
+
+  .cardContainer {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2vw;
+
+    div {
+      width: 22%;
+      height: 15vw;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h4 {
+        padding: 0 1vw 0 1vw;
+        text-align: center;
+        color: white;
+        font-size: 1.8vw;
+        font-weight: 500;
+      }
+
+      p {
+        margin-top: 1vw;
+        color: white;
+        font-size: 2.5vw;
+        font-weight: 550;
+      }
+    }
+
+    #card-1 {
+      background-color: $gAzulClaro;
+    }
+    #card-2 {
+      background-color: $gVerde;
+    }
+    #card-3 {
+      background-color: $gAmarelo;
+    }
+    #card-4 {
+      background-color: $gVermelho;
+    }
+  }
+
+
+}
