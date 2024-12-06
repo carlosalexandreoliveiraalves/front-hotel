@@ -11,18 +11,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LuxousRoomComponent implements OnInit {
 
-  luxousRooms: luxousRoomList[] = []; //filtrar informaç~eos da tabela
+  luxousRoom: luxousRoomList[] = []; //filtrar informaç~eos da tabela
   luxousRoomDiverse: luxousRoomList[] = [];
+
+  occupiedRoom: luxousRoomList[] = [];
+
 
   //injeção de depêndencia, acesso a todos os métodos em service
   constructor(private serviceLuxousRoom:LuxousRoomService) {}
 
   ngOnInit(): void {
     this.serviceLuxousRoom.GetLuxousRoom().subscribe(response => {
-      this.luxousRooms = response;
+      this.luxousRoom = response;
       this.luxousRoomDiverse = response;
       console.log(response); //Verificar o que está vindo
     });
+
+    this.occupiedRoom = this.luxousRoomDiverse.filter(item => item.disponivel == false);
+    console.log(this.occupiedRoom);
+
+
   }
   //Deve utilizar o tipo "subscribe" para um retorno "observable"
 
